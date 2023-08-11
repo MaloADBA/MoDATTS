@@ -1,0 +1,16 @@
+[submodule "submodules/fcn_maker"]
+	path = submodules/fcn_maker
+	url = https://github.com/veugene/fcn_maker
+	branch = separate_encoder_decoder
+[submodule "submodules/data_tools"]
+	path = submodules/data_tools
+	url = https://github.com/veugene/data_tools.git
+[submodule "submodules/ignite"]
+	path = submodules/ignite
+	url = https://github.com/pytorch/ignite.git
+[submodule "submodules/tensorboardX"]
+	path = submodules/tensorboardX
+	url = https://github.com/veugene/tensorboardX.git
+[submodule "submodules/batchgenerators"]
+	path = submodules/batchgenerators
+	url = https://github.com/MIC-DKFZ/batchgenerators.git

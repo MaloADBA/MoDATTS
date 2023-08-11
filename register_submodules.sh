@@ -1,0 +1,11 @@
+#!/bin/bash
+SOURCE_ROOT="`pwd`"
+export PYTHONPATH="$SOURCE_ROOT/submodules/data_tools/:$PYTHONPATH"
+export PYTHONPATH="$SOURCE_ROOT/submodules/fcn_maker/:$PYTHONPATH"
+export PYTHONPATH="$SOURCE_ROOT/submodules/ignite/:$PYTHONPATH"
+export PYTHONPATH="$SOURCE_ROOT/submodules/tensorboardX/:$PYTHONPATH"
+export PYTHONPATH="$SOURCE_ROOT/submodules/nnunet/:$PYTHONPATH"
+export PYTHONPATH="$SOURCE_ROOT/submodules/batchgenerators/:$PYTHONPATH"
+echo "PYTHONPATH=$PYTHONPATH"
+export PATH="$PATH:$SOURCE_ROOT/submodules/ddsm_normals/ddsm_convert/jpegdir"
+echo  "PATH=$PATH"

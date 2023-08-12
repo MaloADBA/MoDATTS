@@ -57,6 +57,11 @@ python3 mbrats_3d_self_training.py --data '/path/2d_trans_t1_t2.h5' --path '/log
 
 ```
 
+#### Semi-supervised variant
+
+
+
+#### Self-Training
 To generate pseudo-labels from the previous stage of the segmentation model:
 
 ```

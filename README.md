@@ -74,4 +74,4 @@ python Generate_mbrats_pseudo_labels.py --data_dir "/path/2d_trans_t1_t2.h5" --s
 
 ```
 
-To retrain the segmentation model with additional supervision from the pseudo-labels (and load previous weights), add "--pseudo_labels '/path/pseudo_labels/self_sup_t1_t2_iter_x.h5' --weights_from '/model_from_previous_iteration/best_state_dict_x.pth'"
+To retrain the segmentation model with additional supervision from the pseudo-labels (and load previous weights), add `--pseudo_labels '/path/pseudo_labels/self_sup_t1_t2_iter_x.h5' --weights_from '/model_from_previous_iteration/best_state_dict_x.pth'`

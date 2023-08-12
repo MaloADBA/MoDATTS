@@ -22,6 +22,8 @@ We use the 2020 version of the BRATS data from https://www.med.upenn.edu/cbica/b
 
 ### Modality translation phase
 
+![Screenshot](Tumor_aware_mod_trans.png)
+
 The data can be prepared for the cross-modality translation using a provided script, as follows:
 
 ```
@@ -38,6 +40,8 @@ python3 mbrats_2d_trans.py --data '/path/translation_transunet.h5' --path '/log_
 ```
 
 Pick source and target contrasts (t1, t1ce, flair or t2) with `--source_modality` and `--target_modality` arguments.
+
+![Screenshot](Translation_brats.png)
 
 ### Segmentation phase
 
@@ -66,6 +70,8 @@ python3 mbrats_3d_self_training_ss.py --data '/path/2d_trans_t1_t2_96_160_64.h5'
 
 ```
 
+![Screenshot](MBRATS.png)
+
 #### Self-Training
 To generate pseudo-labels from the previous stage of the segmentation model:
 
@@ -75,3 +81,5 @@ python Generate_mbrats_pseudo_labels.py --data_dir "/path/2d_trans_t1_t2.h5" --s
 ```
 
 To retrain the segmentation model with additional supervision from the pseudo-labels (and load previous weights), add `--pseudo_labels '/path/pseudo_labels/self_sup_t1_t2_iter_x.h5' --weights_from '/model_from_previous_iteration/best_state_dict_x.pth'`
+
+![Screenshot](self_training_mbrats.png)

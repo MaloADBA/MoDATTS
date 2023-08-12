@@ -53,13 +53,18 @@ python Prepare_mbrats_mod_translation_3D.py --data_dir "<download_dir_brats>" --
 To train the self-supervised variant of MoDATTS, use the following command:
 
 ```
-python3 mbrats_3d_self_training.py --data '/path/2d_trans_t1_t2.h5' --path '/log_and_save_model_to/' --model_from 'model/configs/3d_mbrats/medformer_3d.py' --model_kwargs '{"lambda_enforce_sum": 1, "lambda_disc": 0, "lambda_seg": 1, "lambda_x_id": 0, "lambda_z_id": 0}' --weight_decay 0.0001 --labeled_fraction_source 1 --labeled_fraction_target 0 --batch_size_train 2 --batch_size_valid 2 --epochs 300 --opt_kwargs '{"betas": [0.5, 0.999], "lr": 0.0001}' --optimizer amsgrad --nb_proc_workers 2 --n_vis 4 --init_seed 1234 --data_seed 0 --dispatch_canada --account def-sakad --time '12:0:0' --cca_mem '32G' --cca_cpu 8 --copy_local
+python3 mbrats_3d_self_training.py --data '/path/2d_trans_t1_t2.h5' --path '/log_and_save_model_to/' --model_from 'model/configs/3d_mbrats/medformer_3d.py' --model_kwargs '{"lambda_enforce_sum": 1, "lambda_disc": 0, "lambda_seg": 1, "lambda_x_id": 0, "lambda_z_id": 0}' --weight_decay 0.0001 --labeled_fraction_source 1 --labeled_fraction_target 0 --batch_size_train 2 --batch_size_valid 2 --epochs 300 --opt_kwargs '{"betas": [0.5, 0.999], "lr": 0.0001}' --optimizer amsgrad --nb_proc_workers 2 --n_vis 4 --init_seed 1234 --data_seed 0
 
 ```
 
 #### Semi-supervised variant
 
+To train the semi-supervised variant of MoDATTS, use the following command:
 
+```
+python3 mbrats_3d_self_training_ss.py --data '/path/2d_trans_t1_t2_96_160_64.h5' --path '/log_and_save_model_to/' --model_from 'model/configs/3d_mbrats/medformer_3d_semi_sup.py' --model_kwargs '{"lambda_enforce_sum": 1, "lambda_disc": 3, "lambda_seg": 10, "lambda_x_id": 50, "lambda_z_id": 5}' --weight_decay 0.0001 --labeled_fraction_source 1 --labeled_fraction_target 0 --batch_size_train 2 --batch_size_valid 2 --epochs 300 --opt_kwargs '{"betas": [0.5, 0.999], "lr": 0.0001}' --optimizer amsgrad --nb_proc_workers 2 --n_vis 4 --init_seed 1234 --data_seed 0
+
+```
 
 #### Self-Training
 To generate pseudo-labels from the previous stage of the segmentation model:

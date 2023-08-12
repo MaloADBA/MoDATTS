@@ -1,6 +1,6 @@
 # Cross-Modality segmentation : MoDATTS
 
-![Screenshot](MoDATTS.png)
+![Screenshot](Visual_abstract.png)
 
 ## Initialization
 

@@ -1,4 +1,4 @@
-# Cross-Modality segmentation : MoDATTS
+# Cross-Modality segmentation : MoDATTS (https://arxiv.org/pdf/2309.09246.pdf)
 
 ![Screenshot](Visual_abstract.png)
 

@@ -1,4 +1,4 @@
-# Cross-Modality segmentation : MoDATTS ([https://arxiv.org/pdf/2309.09246.pdf](https://www.sciencedirect.com/science/article/pii/S1361841524002123))
+# Cross-Modality segmentation : MoDATTS ([[https://arxiv.org/pdf/2309.09246.pdf](https://www.sciencedirect.com/science/article/pii/S1361841524002123)](https://www.sciencedirect.com/science/article/pii/S1361841524002123))
 
 ![Screenshot](Visual_abstract.png)
 
